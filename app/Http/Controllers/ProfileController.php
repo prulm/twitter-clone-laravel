@@ -7,6 +7,17 @@ use Illuminate\Http\Request;
 class ProfileController extends Controller
 {
     public function index() {
-        return view('users.profile');
+        $users = [
+            [
+                'name' => 'Jared',
+                'age' => 23,
+            ],
+            [
+                'name' => 'Prulm',
+                'age' => 22,
+            ],
+        ];
+
+        return view('users.profile', ['users' => $users]);
     }
 }
